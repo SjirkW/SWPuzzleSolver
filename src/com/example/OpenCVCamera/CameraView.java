@@ -115,7 +115,7 @@ public class CameraView extends JavaCameraView
 	/**
 	 * Turns the the camera flash on when it's off, turns it off when it's on
 	 */
-	public void EnableFlash( )
+	public void enableFlash( )
 	{
 		Parameters p = mCamera.getParameters( );
 
