@@ -131,4 +131,5 @@ public class CameraView extends JavaCameraView
 		mCamera.setParameters( p);
 	}
 
+
 }
