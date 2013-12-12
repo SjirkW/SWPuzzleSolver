@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sudokuView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/buttonBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="140"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buttonSolve"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button"
+            android:onClick="solveSudokuClick"
+            android:text="@string/solve"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_button_blue"
+            android:onClick="onBackClick"
+            android:text="@string/back"
+            android:textColor="#ffffff"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/puzzleFrame"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="480" >
+
+        <com.example.Sudoku.SudokuView
+            android:id="@+id/puzzleView"
+            android:layout_width="fill_parent"
+            android:layout_height="339dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp" >
+        </com.example.Sudoku.SudokuView>
+
+        <LinearLayout
+            android:id="@+id/buttonRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/one"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/rounded_button_gray"
+                android:onClick="changeNumberClick"
+                android:text="@string/_1"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/two"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/rounded_button_gray"
+                android:onClick="changeNumberClick"
+                android:text="@string/_2"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/three"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/rounded_button_gray"
+                android:onClick="changeNumberClick"
+                android:text="@string/_3"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/four"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/rounded_button_gray"
+                android:onClick="changeNumberClick"
+                android:text="@string/_4"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/five"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/rounded_button_gray"
+                android:onClick="changeNumberClick"
+                android:text="@string/_5"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/six"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/rounded_button_gray"
+                android:onClick="changeNumberClick"
+                android:text="@string/_6"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/seven"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/rounded_button_gray"
+                android:onClick="changeNumberClick"
+                android:text="@string/_7"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/eight"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/rounded_button_gray"
+                android:onClick="changeNumberClick"
+                android:text="@string/_8"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/nine"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/rounded_button_gray"
+                android:onClick="changeNumberClick"
+                android:text="@string/_9"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/buttonPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="180"
+        android:orientation="vertical" 
+        android:onClick="onOutsideClick">
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:onClick="onCheckboxClick" />
+
+    </RelativeLayout>
+
+    <!--  <LinearLayout
+        android:id="@+id/loadSaveBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="130"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/load"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button_blue"
+            android:text="@string/load"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:text="@string/save"
+            android:textColor="#ffffff" />
+    </LinearLayout>-->
+
+</LinearLayout>

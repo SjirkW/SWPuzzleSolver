@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+>
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="8dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="16dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:cropToPadding="false"
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:onClick="onFlashButtonClick"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dragon_go" 
+        android:contentDescription="@string/desc"/>
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        android:background="@null"
+        android:cropToPadding="false"
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:onClick="onCaptureButtonClick"
+        android:scaleType="centerCrop"
+        android:src="@drawable/camera"
+        android:contentDescription="@string/desc" />
+
+</RelativeLayout>
